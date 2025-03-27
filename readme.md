@@ -93,7 +93,7 @@ kubectl version --short
 
 The output will include the version numbers of both the Client and Server you’re connected to.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/b9cd9f462c4ec3d915c42a2091e9cc34ed688ca8/screenshots/Screenshot%202025-03-27%20124932.png)
 
 
 Run the followings commands in succession to verify the a node and default ClusterIP service was created when deploying the Kubernetes cluster 
