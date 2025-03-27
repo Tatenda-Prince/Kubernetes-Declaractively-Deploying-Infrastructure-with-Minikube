@@ -149,8 +149,8 @@ web page.
 
 4.Monitoring & logging sidecars in microservices
 
+5.Here I will use the nano text editor to create a Kubernetes sidecarpod.yml  YAML file by running the following command
 
-Here I will use the nano text editor to create a Kubernetes sidecarpod.yml  YAML file by running the following command
 
 
 ```language
@@ -208,6 +208,7 @@ spec:
 
 ```
 
+
 ## Deployment Steps
 We’ll walk through the following steps to see it in action:
 
@@ -255,9 +256,6 @@ Minikube service svc-sidecar
 ```
 
 9.Open a browser and go to http://127.0.0.1:33413 to see the latest synced content.
-
-
-![image_alt]()
 
 
 ![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/3ac24d67032631368c58c02a87ec1029e79ff841/screenshots/Screenshot%202025-03-27%20170408.png)
