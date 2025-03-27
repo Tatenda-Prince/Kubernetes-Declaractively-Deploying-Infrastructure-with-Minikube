@@ -118,6 +118,7 @@ A multi-container Pod in Kubernetes is a Pod that runs multiple containers shari
 A common implementation is the sidecar pattern, where a secondary container supports the main application without modifying its core functionality.
 
 In this example, we deploy a Kubernetes Pod where:
+
 `The main container (ctr-web)` runs an Nginx web server serving static content.
 
 `The sidecar container (ctr-sync)` automatically syncs content from a GitHub repository.
@@ -125,11 +126,17 @@ In this example, we deploy a Kubernetes Pod where:
 This setup ensures the web server always has the latest content without requiring manual updates.
 
 ## Architecture
-1.Web Container (ctr-web): Runs Nginx and serves static content from a shared volume.
+1.`Web Container (ctr-web)`: Runs Nginx and serves static content from a shared volume.
 
-2.Sidecar Container (ctr-sync): Uses Git-Sync to pull content from a remote Git repository into the shared volume.
+2.`Sidecar Container (ctr-sync)`: Uses Git-Sync to pull content from a remote Git repository into the shared volume.
 
-3.Shared Volume (emptyDir): Allows both containers to access and update the same files.
+3.`Shared Volume (emptyDir)`: Allows both containers to access and update the same files.
+
+4.When the contents of the GitHub repo change, the sidecar copies the updates to the
+shared volume, where the app container notices and serves an updated version of the
+web page.
+
+
 
 ![image_alt]()
 
