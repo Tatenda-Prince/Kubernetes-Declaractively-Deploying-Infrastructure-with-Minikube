@@ -127,7 +127,7 @@ This setup ensures the web server always has the latest content without requirin
 
 ## Architecture
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/0d160d53b75e593a837fe014bba2a34f1bd39f74/screenshots/Screenshot%202025-03-27%20182148.png)
 
 1.`Web Container (ctr-web)`: Runs Nginx and serves static content from a shared volume.
 
