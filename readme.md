@@ -126,6 +126,9 @@ In this example, we deploy a Kubernetes Pod where:
 This setup ensures the web server always has the latest content without requiring manual updates.
 
 ## Architecture
+
+![image_alt]()
+
 1.`Web Container (ctr-web)`: Runs Nginx and serves static content from a shared volume.
 
 2.`Sidecar Container (ctr-sync)`: Uses Git-Sync to pull content from a remote Git repository into the shared volume.
@@ -135,11 +138,6 @@ This setup ensures the web server always has the latest content without requirin
 4.When the contents of the GitHub repo change, the sidecar copies the updates to the
 shared volume, where the app container notices and serves an updated version of the
 web page.
-
-
-
-![image_alt]()
-
 
 ## Real-World Use Cases
 
