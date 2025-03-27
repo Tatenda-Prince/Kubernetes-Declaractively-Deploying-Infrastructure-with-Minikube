@@ -83,7 +83,7 @@ minikube start
 
 You should observe miniKube running through a series of steps to create the Kubernetes Cluster and node, as seen below.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/eb9634fc5ec220a696b9d5aa883cacef7831b2df/screenshots/Screenshot%202025-03-27%20123942.png)
 
 We can now verify that Kubernetes Cluster is ready by running the following command which displays the running Client and Server
 
@@ -93,7 +93,7 @@ kubectl version --short
 
 The output will include the version numbers of both the Client and Server you’re connected to.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/b9cd9f462c4ec3d915c42a2091e9cc34ed688ca8/screenshots/Screenshot%202025-03-27%20124932.png)
 
 
 Run the followings commands in succession to verify the a node and default ClusterIP service was created when deploying the Kubernetes cluster 
@@ -109,7 +109,7 @@ kubectl get nodes
 
 You will see similar results as shown below. One default Service of type `ClusterIP` and one `minikube` Node that is the master/control plane.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/08e24bb5202378e6d7f0495fa45abe0183bb0130/screenshots/Screenshot%202025-03-27%20125454.png)
 
 Now that we’ve set up our environment, let’s proceed to Step 1 — Creating the Deploying Pods from a manifest file using YAML to leverage IaC.
 
@@ -127,7 +127,7 @@ This setup ensures the web server always has the latest content without requirin
 
 ## Architecture
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/0d160d53b75e593a837fe014bba2a34f1bd39f74/screenshots/Screenshot%202025-03-27%20182148.png)
 
 1.`Web Container (ctr-web)`: Runs Nginx and serves static content from a shared volume.
 
@@ -260,24 +260,25 @@ Minikube service svc-sidecar
 ![image_alt]()
 
 
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/3ac24d67032631368c58c02a87ec1029e79ff841/screenshots/Screenshot%202025-03-27%20170408.png)
+
 
 ## Expected Outcome
 
 9.1.Paste the value into a new browser tab to see the web page:
  It will display `This isversion 1.0`
 
- ![image_alt]()
+ ![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/5029ce5ce4780b1b04f7991b185a31cba83fb38f/screenshots/Screenshot%202025-03-27%20170423.png)
 
 9.2.Be sure to complete the following step against your forked repo.
 
 9.3.Go to your forked repo and edit the index.html file. Change the `<h1>` line to something
 different and save your changes.
 
-![image_alt]()
 
 Refresh the app’s web page to see your updates.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/58e0916b83536dbdb2d1ac3d371b7a66b96e3ff4/screenshots/Screenshot%202025-03-27%20171651.png)
 
 Congratulations. The sidecar container successfully watched a remote Git repo, synced
 the changes to a shared volume, and the main app container updated the web page.
