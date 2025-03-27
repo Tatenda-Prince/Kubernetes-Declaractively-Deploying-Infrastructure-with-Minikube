@@ -260,7 +260,7 @@ Minikube service svc-sidecar
 9.1.Paste the value into a new browser tab to see the web page:
  It will display `This isversion 1.0`
 
- ![image_alt]()
+ ![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/5029ce5ce4780b1b04f7991b185a31cba83fb38f/screenshots/Screenshot%202025-03-27%20170423.png)
 
 9.2.Be sure to complete the following step against your forked repo.
 
