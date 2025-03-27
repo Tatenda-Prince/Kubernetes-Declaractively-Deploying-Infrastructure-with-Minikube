@@ -252,6 +252,8 @@ Minikube service svc-sidecar
 
 9.Open a browser and go to http://localhost:8080 to see the latest synced content.
 
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/3ac24d67032631368c58c02a87ec1029e79ff841/screenshots/Screenshot%202025-03-27%20170408.png)
+
 
 ## Expected Outcome
 
