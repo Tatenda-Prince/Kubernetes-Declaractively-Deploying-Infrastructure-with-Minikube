@@ -267,11 +267,10 @@ Minikube service svc-sidecar
 9.3.Go to your forked repo and edit the index.html file. Change the `<h1>` line to something
 different and save your changes.
 
-![image_alt]()
 
 Refresh the app’s web page to see your updates.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/58e0916b83536dbdb2d1ac3d371b7a66b96e3ff4/screenshots/Screenshot%202025-03-27%20171651.png)
 
 Congratulations. The sidecar container successfully watched a remote Git repo, synced
 the changes to a shared volume, and the main app container updated the web page.
