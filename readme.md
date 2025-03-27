@@ -213,7 +213,7 @@ We’ll walk through the following steps to see it in action:
 
 3. Deploy the app
 
-4. Connect to the app and see it display This is version 1.0
+4. Connect to the app and see it display `This is version 1.0`
 
 5. Make a change to your fork of the GitHub repo
 
@@ -273,7 +273,6 @@ Refresh the app’s web page to see your updates.
 
 Congratulations. The sidecar container successfully watched a remote Git repo, synced
 the changes to a shared volume, and the main app container updated the web page.
-
 The Nginx container serves the latest content from the GitHub repository.
 Any changes made in the repository are automatically synced by the sidecar container.
 
