@@ -83,7 +83,7 @@ minikube start
 
 You should observe miniKube running through a series of steps to create the Kubernetes Cluster and node, as seen below.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/eb9634fc5ec220a696b9d5aa883cacef7831b2df/screenshots/Screenshot%202025-03-27%20123942.png)
 
 We can now verify that Kubernetes Cluster is ready by running the following command which displays the running Client and Server
 
