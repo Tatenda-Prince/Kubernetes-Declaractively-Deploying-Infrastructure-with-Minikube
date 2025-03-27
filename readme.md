@@ -141,7 +141,16 @@ web page.
 ![image_alt]()
 
 
-## Kubernetes YAML Configuration
+## Real-World Use Cases
+
+1.Automated documentation updates (like GitHub Pages & Netlify)
+
+2.CI/CD pipelines for static content
+
+3.Configuration & policy updates in Kubernetes
+
+4.Monitoring & logging sidecars in microservices
+
 
 Here I will use the nano text editor to create a Kubernetes sidecarpod.yml  YAML file by running the following command
 
@@ -196,6 +205,85 @@ spec:
   - port: 80
   type: LoadBalancer
 ```
+
+## Deployment Steps
+We’ll walk through the following steps to see it in action:
+
+1. Fork the GitHub repo
+
+2. Update the YAML file with the URL of your forked repo
+
+3. Deploy the app
+
+4. Connect to the app and see it display This is version 1.0
+
+5. Make a change to your fork of the GitHub repo
+
+6. Verify your changes appear on the web page
+Go to GitHub and fork the following repo. You’ll need a GitHub account to do this.
+
+`https://github.com/Tatenda-Prince/ps-sidecar-K8s`
+
+
+7.Come back to your local machine and edit the `sidecarpod.yml`. 
+
+`Change the GIT_SYNC_-REPO` value to match the URL of your forked repo, and save your changes.
+
+8.Run the following command to deploy the application. It will deploy the Pod as well as a
+Service you’ll use to connect to the app
+
+8.1.Apply the YAML file to create the Pod:
+```language
+kubectl apply -f sidecarpod.yml
+```
+
+8.2.Verify the Pod is running:
+```language
+kubectl get pods
+```
+
+8.3.Get the service:
+```language
+kubectl get svc
+```
+
+8.4.Forward the Nginx service and access the webpage:
+```language
+Minikube service svc-sidecar
+```
+
+9.Open a browser and go to http://localhost:8080 to see the latest synced content.
+
+
+## Expected Outcome
+
+9.1.Paste the value into a new browser tab to see the web page:
+ It will display `This isversion 1.0`
+
+ ![image_alt]()
+
+9.2.Be sure to complete the following step against your forked repo.
+
+9.3.Go to your forked repo and edit the index.html file. Change the `<h1>` line to something
+different and save your changes.
+
+![image_alt]()
+
+Refresh the app’s web page to see your updates.
+
+![image_alt]()
+
+Congratulations. The sidecar container successfully watched a remote Git repo, synced
+the changes to a shared volume, and the main app container updated the web page.
+
+The Nginx container serves the latest content from the GitHub repository.
+Any changes made in the repository are automatically synced by the sidecar container.
+
+## Conclusion 
+We have successfully learned how Kubernetes deploys all applications inside Pods.Pods can be single-container or multi-container, and all containers in a multi-containerPod share the Pod’s networking, volumes, and memory.This project demonstrates the power of multi-container Pods and the sidecar pattern in Kubernetes, making deployments more efficient and automated.
+
+
+
 
 
 
