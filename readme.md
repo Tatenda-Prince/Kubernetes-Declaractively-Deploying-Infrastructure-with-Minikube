@@ -109,7 +109,7 @@ kubectl get nodes
 
 You will see similar results as shown below. One default Service of type `ClusterIP` and one `minikube` Node that is the master/control plane.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Kubernetes-Declaractively-Deploying-Infrastructure-with-Minikube/blob/08e24bb5202378e6d7f0495fa45abe0183bb0130/screenshots/Screenshot%202025-03-27%20125454.png)
 
 Now that we’ve set up our environment, let’s proceed to Step 1 — Creating the Deploying Pods from a manifest file using YAML to leverage IaC.
 
